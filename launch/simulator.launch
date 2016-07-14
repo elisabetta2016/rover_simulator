@@ -1,0 +1,18 @@
+<launch>
+  <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 1.57 0 0 /Imu_link /base_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="link2_broadcaster" args="0.493 0 0 0 0 0 /base_link /laser 100" />
+ 
+  <node pkg="tf" type="static_transform_publisher" name="link3_broadcaster" args="-0.093 0 0 0 0 0 /laser  /b_link 100" />
+  
+ 
+ 
+  <node pkg="joy" name="joy_node" type="joy_node" output="screen">
+  </node>
+ 
+  <node pkg="rover_simulator" name="rover_sim" type="rover_sim" output="screen" required="true">
+    
+  </node>
+  
+
+</launch>
+
