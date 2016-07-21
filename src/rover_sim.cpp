@@ -53,8 +53,8 @@ class DonkeyRoverClass
             		
             		
             		// initializer
-            		Speed_control.RLC = true;
-            		Speed_control.CMD = true;
+            		Speed_control.RLC = false;
+            		Speed_control.CMD = false; 
             		Speed_control.JOY = true;
             		
             		v = 0;
