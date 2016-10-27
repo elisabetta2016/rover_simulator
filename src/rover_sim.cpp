@@ -322,10 +322,10 @@ class DonkeyRoverClass
     				
 
     				// Correction applied
-    				//vx = v * cos(th);    
-    				//vy = v * sin(th);
-    				vy = v * cos(th);
-				vx = -v * sin(th);
+            vx = v * cos(th);
+            vy = v * sin(th);
+            //vy = v * cos(th);
+            //vx = -v * sin(th);
 
 
     				//compute odometry in a typical way given the velocities of the robot
@@ -347,10 +347,10 @@ class DonkeyRoverClass
     				geometry_msgs::TransformStamped odom_trans;
     				odom_trans.header.stamp = current_time;
     				odom_trans.header.frame_id = "odom";
-    				odom_trans.child_frame_id = "Imu_link";
+            odom_trans.child_frame_id = "base_footprint";
 
     				odom_trans.transform.translation.x = x;
-   				odom_trans.transform.translation.y = y;
+            odom_trans.transform.translation.y = y;
     				odom_trans.transform.translation.z = 0.0;
     				odom_trans.transform.rotation = odom_quat;
 
