@@ -243,7 +243,7 @@ class DonkeyRoverClass
   			current_time = ros::Time::now();
   			last_time = ros::Time::now();
 			ros::Rate loop_rate(rate);
-			
+
   			while(ros::ok()){
 
 				// Start Scanner Angle Loop 
@@ -432,6 +432,7 @@ class DonkeyRoverClass
 		donkey_rover::Rover_Power_Data outputPower;
 		donkey_rover::Speed_control Speed_control;
 		custom_msgs::gnssSample gps;
+
 		bool speed_present;
 		
 		float v;
