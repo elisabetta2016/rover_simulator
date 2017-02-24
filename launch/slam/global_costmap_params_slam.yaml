@@ -4,6 +4,8 @@ global_costmap:
   update_frequency: 3
   static_map: false     #true if using amcl
   rolling_window: true  #false if using amcl
-  origin_x: -5
-  origin_y: -5
+  origin_x: 0
+  origin_y: 0
+  publish_frequency: 5
+  always_send_full_costmap: True
 
